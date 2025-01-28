@@ -11,7 +11,8 @@ if command -v conda >/dev/null 2>&1; then
 
     echo "-------------------------installing equidiff------------------------"
 
-    git clone https://github.com/pointW/equidiff.git
+    # git clone https://github.com/pointW/equidiff.git
+    git clone https://github.com/nsojib/equidiff.git
     cd equidiff
 
     conda env create -f conda_environment.yaml --solver=libmamba -y
