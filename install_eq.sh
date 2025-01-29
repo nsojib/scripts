@@ -60,3 +60,9 @@ fi
 
 python dataset_states_to_obs.py --input /home/ubuntu/equidiff/data/square.hdf5 --output /home/ubuntu/equidiff/data/square.hdf5 --num_workers=24
 
+cd ..
+git clone https://github.com/ARISE-Initiative/robosuite-task-zoo
+cd robosuite-task-zoo
+git checkout 74eab7f88214c21ca1ae8617c2b2f8d19718a9ed
+# NOTE: should remove dependencies in setup.py in the "install_requires" before the last step
+pip install -e .
