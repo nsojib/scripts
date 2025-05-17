@@ -2,6 +2,11 @@
 git clone https://github.com/nsojib/diffusion_policy.git
 
 cd diffusion_policy
+
+mkdir data && cd data
+wget https://diffusion-policy.cs.columbia.edu/data/training/pusht.zip
+unzip pusht.zip && rm -f pusht.zip && cd ..
+
 conda env create -f conda_environment.yaml solver=libmamba
 
 conda activate robodiff
