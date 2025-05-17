@@ -20,3 +20,12 @@ sudo reboot
 ```
 
 
+-------------
+ fatal error: GL/osmesa.h: No such file or directory
+    1 | #include <GL/osmesa.h>
+
+conda install --yes -c conda-forge libosmesa
+
+conda install -c conda-forge glew
+conda install -c conda-forge mesalib
+conda install -c menpo glfw3
