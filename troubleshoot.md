@@ -29,3 +29,15 @@ conda install --yes -c conda-forge libosmesa
 conda install -c conda-forge glew
 conda install -c conda-forge mesalib
 conda install -c menpo glfw3
+
+
+
+### Dataloader killed (e.g. in diffusion policy)
+* RuntimeError: DataLoader worker (pid 3068127) is killed by signal: Aborted. 
+
+Put the following at the beginning of the training script.
+```
+import multiprocessing as mp
+mp.set_start_method("spawn", force=True)
+```
+
